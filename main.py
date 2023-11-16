@@ -19,6 +19,14 @@ gray_count = column_list.count('Gray')
 cinnamon_count = column_list.count('Cinnamon')
 black_count = column_list.count('Black')
 
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [gray_count, cinnamon_count, black_count]
+}
+
+df = pd.DataFrame(data_dict)
+df.to_csv("squirrel_count.csv")
+
 print(f"Gray: {gray_count}, Cinnamon: {cinnamon_count}, Black: {black_count}")
 
 #After looking more, i've found a easier way to discover what i really wanted!
